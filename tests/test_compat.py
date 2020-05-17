@@ -43,4 +43,4 @@ class test_compat(unittest.TestCase):
             from jsbc.compat.pickle import pickle
         except ImportError:
             assert False, "pickle can't be imported"
-        assert type == type(pickle)
+        assert True
