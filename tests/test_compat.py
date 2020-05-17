@@ -37,3 +37,10 @@ class test_compat(unittest.TestCase):
         except ImportError:  # OrderedDict was added in Python 2.7
             assert False, "OrderedDict can't be imported"
         assert type == type(OrderedDict)
+
+    def test_pickle(self):
+        try:
+            from jsbc.compat.pickle import pickle
+        except ImportError:
+            assert False, "pickle can't be imported"
+        assert type == type(pickle)
